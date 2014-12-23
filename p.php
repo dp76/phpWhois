@@ -29,13 +29,10 @@ class tests extends PHPUnit_Framework_TestCase {
         $current = $array;
         foreach(explode(".", $path) as $element) { // registrar.whois.servers.1.server
             if(!isset($current[$element])) {
-                echo "???".$array;
-                echo "-- $element";
                 return false;
             }
             $current = $current[$element];
         }
-        echo "++".$current;
         return $current;
     }
 
