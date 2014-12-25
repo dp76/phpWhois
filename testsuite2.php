@@ -85,8 +85,8 @@ foreach ($domains as $domain) {
     echo "\nTesting $domain ---------------------------------\n";
 
     $result = $whois->Lookup($domain);
-    print_r($result['rawdata']);
-
+    print_r($result);
+    die();
     unset($result['rawdata']);
 
     if (!isset($results[$domain])) {
